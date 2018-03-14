@@ -9,6 +9,27 @@
 </head>
 <body>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <h1>Crystal Collector</h1>
+        <div class="instructions">
+            <h3>Instructions</h3>
+                <h4>
+                    <p>You will be Given a target score between 25- 100 at the start of the game.</p><br />
+                    <p> There are four Crystals below. By clicking on each of the crystals you will add a specific amount to your total  score.</p><br />
+                    <p>You win by matching the your score to the Target Score - EXACTLY!!!</p><br />
+                    <p>If you go over....so sorry but, YOU LOSE!</p><br />
+                </h4>
+        </div>
+<h3>TARGET SCORE: <span id="targetScore"></span></h3>
+<h3>YOUR SCORE:<span id="yourScore"></span></h3>
+        <div id="crystals">
+                <img class="crystal-image" src="assets/media/earth.jpg">
+                <img class="crystal-image" src="assets/media/air.jpg" >
+                <img class="crystal-image" src="assets/media/fire.jpg">
+                <img class="crystal-image" src="assets/media/water.jpg">
+        </div>
+        <div class="button" id="start">START GAME</div>
+        <span id="record"></span>
         <script src="assets/javascript/game.js"></script>
 </body>
 </html>

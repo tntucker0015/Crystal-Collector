@@ -1,0 +1,10 @@
+.crystal-image {
+    width:150px;
+    height:150px;
+    padding: 0px;
+    margin:0px;
+}
+
+#crystals {
+    background-color: black;
+}
