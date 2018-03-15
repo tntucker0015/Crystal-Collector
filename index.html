@@ -6,6 +6,8 @@
     <title>Crystal Collector</title>
     <link rel=stylesheet type="text/css" href="assets/css/reset.css">
     <link rel=stylesheet type="text/css" href="assets/css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 </head>
 <body>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -23,13 +25,11 @@
 <h3>TARGET SCORE: <span id="targetScore"></span></h3>
 <h3>YOUR SCORE:<span id="yourScore"></span></h3>
         <div id="crystals">
-                <img class="crystal-image" src="assets/media/earth.jpg">
-                <img class="crystal-image" src="assets/media/air.jpg" >
-                <img class="crystal-image" src="assets/media/fire.jpg">
-                <img class="crystal-image" src="assets/media/water.jpg">
+               
         </div>
-        <div class="button" id="start">START GAME</div>
-        <span id="record"></span>
+        <button id="start" class="btn btn-primary btn-lg"><h1>Start Game</h1></button>
+        <h3>Wins: <span id="wins"></span></h3>
+        <h3>Losses: <span id="loss"></span></h3>
         <script src="assets/javascript/game.js"></script>
 </body>
 </html>
