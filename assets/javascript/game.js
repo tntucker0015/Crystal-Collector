@@ -36,7 +36,7 @@ $(document).ready(function() {
         
     }
 
-  
+ 
     // places and prints a random number in target value variable 
     function targetNumber () {
         game.targetScore = Math.floor(Math.random() * 100) + 25;      
@@ -53,14 +53,18 @@ $(document).ready(function() {
             game.yourScore += crystalValue;
             $("#yourScore").text(game.yourScore); 
             // captures wins and losses for the game
-            if (game.yourScore == game.targetScore) {
+            if (game.yourScore === game.targetScore) {
                 game.wins++;
                 $("#wins").text(game.wins);
-                return false;
                 alert("Winner");
+                game.yourScore = 0;
+                return false;
             } else if (game.yourScore >= game.targetScore) {
                 game.losses++;
                 $("#loss").text(game.losses);
+                game.yourScore = 0;
+                alert("loser");
+                return false;
             }
             
     });
