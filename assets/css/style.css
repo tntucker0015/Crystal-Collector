@@ -1,10 +1,29 @@
+body {
+    background-image: url(../media/elementface.jpg);
+    line-height:1px;
+    color: rgb(43, 32, 32)
+}
 .crystal-image {
     width:150px;
     height:150px;
     padding: 0px;
-    margin:0px;
+    margin: 10px;
+    border: solid 3px rgb(43, 32, 32)
 }
 
-#crystals {
-    background-color: black;
+.instructions {
+    width: 50%;
+    line-height: .5;
+    font-size: 12px;
 }
+
+#start {
+    background-image: url(../media/button.jpg);
+    color: rgb(32, 32, 32);
+    border:solid 3px rgb(43, 32, 32);
+}
+
+h4 {
+    line-height: 1;
+}
+

@@ -1,18 +1,12 @@
-// need to fix the following:
-    // start button needs to reset yourscore at the begining (adding a render function)
-    // number generation needs to be random for images
-    // game needs to stop afte you win and you lose.
-    // fix overall layout and look
+// need to:
+    // fix the loser before start issue
+    // remove alerts and replace with winner and loser images
 $(document).ready(function() {
   var options = [10, 5, 2, 1];
 //   var crystals = ["earth", "air", "fire", "water"];
   var crystalSrc= ["assets/media/earth.jpg", "assets/media/air.jpg", "assets/media/fire.jpg", "assets/media/water.jpg"];
   var game = {
       crystalValue: [],
-      earth: [],
-      air: [],
-      fire: [],
-      water: [],
       yourScore: 0,
       targetScore: 0,
       wins: 0,
@@ -22,21 +16,25 @@ $(document).ready(function() {
   var crystals = $("#crystals");
 // // resets your score to 0, invokes target number and sets crystals to random number
     function startGame() {
+        game.yourScore = 0;
+        $("#yourScore").text(game.yourScore); 
        targetNumber();  
        record();
+
     };
 
     // creates a loop to iterate through the array of options - assigns img, class and value
+    var relativeOptions = options.slice();
+
     for (var i =0; i < options.length; i++) {
         var imageCrystal = $('<img>')
         imageCrystal.addClass("crystal-image", crystals[i]);
         imageCrystal.attr("src", crystalSrc[i] );
-        imageCrystal.attr("data-crystalValue", options[i]);
-        crystals.append(imageCrystal);
-        
+        var r = Math.floor(Math.random() * relativeOptions.length);
+        imageCrystal.attr("data-crystalValue",relativeOptions.splice(r,1));
+        crystals.append(imageCrystal);        
     }
 
- 
     // places and prints a random number in target value variable 
     function targetNumber () {
         game.targetScore = Math.floor(Math.random() * 100) + 25;      
