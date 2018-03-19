@@ -1,7 +1,11 @@
 body {
     background-image: url(../media/elementface.jpg);
+}
+
+.container {
+    width: 90%;
     line-height:1px;
-    color: rgb(43, 32, 32)
+    color: rgb(102, 100, 100)
 }
 .crystal-image {
     width:150px;
@@ -11,19 +15,50 @@ body {
     border: solid 3px rgb(43, 32, 32)
 }
 
+.crystal-image:hover {
+    border: solid 5px yellowgreen;
+}
+
 .instructions {
     width: 50%;
     line-height: .5;
     font-size: 12px;
 }
 
+#ts {
+    float:left;
+}
+
+#ys {
+    position: relative;
+    left:200px;
+    float: left;
+}
+
 #start {
     background-image: url(../media/button.jpg);
     color: rgb(32, 32, 32);
     border:solid 3px rgb(43, 32, 32);
+    transition: 1.5s;
+}
+
+#start:hover {
+    background-image: url(../media/button2.jpg);
+    color: white;
+    border: solid 3px white;
 }
 
 h4 {
     line-height: 1;
+}
+
+#resultsW {
+    color: yellowgreen;
+    font-size: 24px;
+}
+
+#resultsL {
+    color: rgb(216, 91, 53);
+    font-size: 24px;
 }
 

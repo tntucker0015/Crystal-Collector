@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crystal Collector</title>
-    <link rel=stylesheet type="text/css" href="assets/css/reset.css">
-    <link rel=stylesheet type="text/css" href="assets/css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
+    <link rel=stylesheet type="text/css" href="assets/css/style.css">
 </head>
-<body>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <h1>Crystal Collector</h1>
-        <div class="instructions">
-            <h3>Instructions</h3>
+<body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="container">
+        <div id="row1" class="row">
+            <h1>Crystal Collector</h1>
+        </div>
+        <div id="row2" class="row">
+            <div class="instructions">
+                <h3>Instructions</h3>
+            </div>
+        </div>
+        <div id="row3" class="row">
+            <div class="column xs-12">
                 <h5>
-                    <p>You will be Given a target score between 25- 100 at the start of the game.</p>
-                    <p> There are four Elements below. By clicking on each of the elements you will add a specific amount to your total  score.</p>
+                    <p>You will be Given a target score between 25- 150 at the start of the game.</p>
+                    <p> There are four Elements below. By clicking on each of the elements you will add a specific amount to
+                        your total score.
+                    </p>
                     <p>You win by matching the your score to the Target Score - EXACTLY!!!</p>
                     <p>If you go over....so sorry but, YOU LOSE!</p>
                 </h5>
+            </div>
         </div>
-<h3>TARGET SCORE: <span id="targetScore"></span></h3>
-<h3>YOUR SCORE:<span id="yourScore"></span></h3>
-        <div id="crystals">
-               
+        <div id="row4" class="row">
+            <span id="resultsW"></span>
+            <span id="resultsL"></span>
         </div>
-        <button id="start" class="btn btn-lg"><h1>Start Game</h1></button>
-        <h3>Wins: <span id="wins"></span></h3>
-        <h3>Losses: <span id="loss"></span></h3>
-        <script src="assets/javascript/game.js"></script>
+        <div id="row5" class="row">
+            <div id="ts" class="column xs-6">
+                <h3>TARGET SCORE:
+                    <span id="targetScore"></span>
+                </h3>
+            </div>
+            <div id="ys" class="column xs-6">
+                <h3>YOUR SCORE:
+                    <span id="yourScore"></span>
+                </h3>
+            </div>
+        </div>
+        <div id="row6" class="row">
+            <div id="crystals"></div>
+        </div>
+        <div id="row7" class="row">
+            <button id="start" class="btn btn-lg">
+                <h1>Start Game</h1>
+            </button>
+        </div>
+        <div id="row8" class="row">
+            <div id="Wins" class="coloumn xs-6">
+                <h3>Wins:
+                    <span id="wins"></span>
+                </h3>
+            </div>
+            <div id="Losses" class="column xs-6">
+                <h3>Losses:
+                    <span id="loss"></span>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
