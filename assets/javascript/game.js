@@ -1,6 +1,3 @@
-// need to:
-// fix the loser before the game starts option
-
 $(document).ready(function () {
     var options = [10, 5, 2, 1];
     var crystalSrc = ["assets/media/earth.jpg", "assets/media/air.jpg", "assets/media/fire.jpg", "assets/media/water.jpg"];
