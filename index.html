@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Collector</title>
+    <title>Element Collector</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel=stylesheet type="text/css" href="assets/css/style.css">
@@ -14,17 +14,18 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div class="container">
         <div id="row1" class="row">
-            <h1>Crystal Collector</h1>
+            <h1>Element Collector</h1>
         </div>
         <div id="row2" class="row">
-            <div class="instructions">
+            
+            <div id="instructionsHead" class="column xs 12">
                 <h3>Instructions</h3>
             </div>
         </div>
         <div id="row3" class="row">
-            <div class="column xs-12">
+            <div id="instructions" class="column xs-12">
                 <h5>
-                    <p>You will be Given a target score between 25- 150 at the start of the game.</p>
+                    <p>You will be Given a target score between 25- 100 at the start of the game.</p>
                     <p> There are four Elements below. By clicking on each of the elements you will add a specific amount to
                         your total score.
                     </p>
@@ -38,15 +39,15 @@
             <span id="resultsL"></span>
         </div>
         <div id="row5" class="row">
-            <div id="ts" class="column xs-6">
-                <h3>TARGET SCORE:
+            <div id="ts" class="column sm-12 md-6">
+                <p>TARGET SCORE:
                     <span id="targetScore"></span>
-                </h3>
+                </p>
             </div>
-            <div id="ys" class="column xs-6">
-                <h3>YOUR SCORE:
+            <div id="ys" class="column sm-12 md-6">
+                <p>YOUR SCORE:
                     <span id="yourScore"></span>
-                </h3>
+                </p>
             </div>
         </div>
         <div id="row6" class="row">

@@ -14,7 +14,6 @@ $(document).ready(function () {
         winner: "",
         loser: "",
     };
-    var results = $("results");
     var crystals = $("#crystals");
 
     // // resets your score to 0, invokes target number and sets crystals to random number
@@ -22,19 +21,8 @@ $(document).ready(function () {
         game.yourScore = 0;
         $("#yourScore").text(game.yourScore);
         targetNumber();
-        game();
+       
     };
-
-    // creates a loop to iterate through the array of options - assigns img, class and value
-    var relativeOptions = options.slice();
-    for (var i = 0; i < options.length; i++) {
-        var imageCrystal = $('<img>')
-        imageCrystal.addClass("crystal-image", crystals[i]);
-        imageCrystal.attr("src", crystalSrc[i]);
-        var r = Math.floor(Math.random() * relativeOptions.length);
-        imageCrystal.attr("data-crystalValue", relativeOptions.splice(r, 1));
-        crystals.append(imageCrystal);
-    }
 
     function reset() {
         game.yourScore = 0;
@@ -42,11 +30,22 @@ $(document).ready(function () {
         $("#resultsW").text("");
         $("#resultsL").text("");
         targetNumber();
-    }
+        crystals.html("");
+        var relativeOptions = options.slice();
+        for (var i = 0; i < options.length; i++) {
+            var imageCrystal = $('<img>')
+            imageCrystal.addClass("crystal-image", crystals[i]);
+            imageCrystal.attr("src", crystalSrc[i]);
+            var r = Math.floor(Math.random() * relativeOptions.length);
+            imageCrystal.attr("data-crystalValue", relativeOptions.splice(r, 1));
+            crystals.append(imageCrystal);
+
+        }
+    };
 
     // places and prints a random number in target value variable 
     function targetNumber() {
-        game.targetScore = Math.floor(Math.random() * 100) + 25;
+        game.targetScore = Math.floor(Math.random() * 75) + 25;
         $("#targetScore").text(game.targetScore);
     };
 
@@ -60,27 +59,38 @@ $(document).ready(function () {
 
     function loseGame() {
         game.losses++;
-        game.loser = "THE ELEMNTS DO NOT FIND FAVOR WITH YOU!";
+        game.loser = "An Evil Presence is Near!";
         $("#loss").text(game.losses);
         $("#resultsL").text(game.loser);
         setTimeout(reset, 2000);
     };
 
+    // creates a loop to iterate through the array of options - assigns img, class and value
+    var relativeOptions = options.slice();
+    for (var i = 0; i < options.length; i++) {
+        var imageCrystal = $('<img>')
+        imageCrystal.addClass("crystal-image", crystals[i]);
+        imageCrystal.attr("src", crystalSrc[i]);
+        var r = Math.floor(Math.random() * relativeOptions.length);
+        imageCrystal.attr("data-crystalValue", relativeOptions.splice(r, 1));
+        crystals.append(imageCrystal);
+    };
+    
     // captures click of image
-        crystals.on("click", ".crystal-image", function () {
-            var crystalValue = ($(this).attr("data-crystalvalue"));
-            crystalValue = parseInt(crystalValue);
-            game.yourScore += crystalValue;
-            $("#yourScore").text(game.yourScore);
-            // captures wins and losses for the game
-            if (game.yourScore === game.targetScore)  {
-                winGame();
-                return false;
-            } else if (game.yourScore > game.targetScore && game.targetScore > 0) {
-                loseGame();
-                return false;
-            }
-        });
+    crystals.on("click", ".crystal-image", function () {
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+        game.yourScore += crystalValue;
+        $("#yourScore").text(game.yourScore);
+        // captures wins and losses for the game
+        if (game.yourScore === game.targetScore) {
+            winGame();
+            return false;
+        } else if (game.yourScore > game.targetScore && game.targetScore > 0) {
+            loseGame();
+            return false;
+        }
+    });
 
     // captures click event from start button
     $("body").on("click", "#start", function () {
