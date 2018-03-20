@@ -10,9 +10,12 @@ body {
 }
 
 .container {
+    display: block;
+    position: relative;
+    top: 25px;
     width: 90%;
     line-height:1px;
-    color: rgb(102, 100, 100)
+    color: rgb(148, 144, 144);
 }
 #instructions {
     width:75%;
@@ -24,7 +27,7 @@ body {
     height:150px;
     padding: 0px;
     margin: 10px;
-    border: solid 3px rgb(43, 32, 32)
+    border: solid 3px rgb(73, 64, 64);
 }
 
 .crystal-image:hover {
@@ -37,11 +40,23 @@ body {
     font-size: 12px;
 }
 
+#row5 {
+    display: inline;
+}
+
 #ts {
     float: left;
-    display: block;
-    width: 30%;
+    width: 100%;
     font-size: 18px;
+    margin-left: -25px;
+}
+
+#ys {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    margin-left: -25px;
+    margin-top: 10px;
 }
 
 #targetScore {
@@ -54,18 +69,10 @@ body {
     font-size: 30px;
 }
 
-#ys {
-    position: relative;
-    float: left;
-    width: 30%;
-    font-size: 18px;
-    
-}
-
 #start {
     background-image: url(../media/button.jpg);
-    color: rgb(32, 32, 32);
-    border:solid 3px rgb(43, 32, 32);
+    color: rgb(73, 64, 64);
+    border:solid 3px rgb(73, 64, 64);
     transition: 1.5s;
 }
 
@@ -76,7 +83,11 @@ body {
 }
 
 #row6 {
+    width: 100%;
     margin-left: -25px;
+}
+#row8 {
+    margin-top: 10px;
 }
 #Wins {
     float:left;
